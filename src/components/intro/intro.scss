@@ -1,0 +1,109 @@
+@import "../../global.scss";
+
+.intro {
+  // background-color: lightpink;
+  display: inherit;
+  // flex-direction: column;
+  // background-color: yellow;
+  
+
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgContainer {
+    width: 455px;
+    height: 350px;
+    
+    border-radius: 80%;
+
+    display: flex;
+    align-items: flex;
+    justify-content: center;
+    float: right;
+  }
+  .left {
+    flex: 0.9;
+    overflow: hidden;
+
+      @include mobile{
+        align-items: flex-start;
+      }
+
+    // img {
+    //     height: 750%;
+       
+
+    //     @include mobile{
+    //       height: 30%;
+    //     }
+    //   }
+    }
+  }
+  .right {
+    flex: 0.9;
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+      }
+
+     
+      h3 {
+        align-items: center;
+        font-size: 38px;
+      }
+      h2{
+        font-size: 20px;
+        align-items: justify;
+        
+       
+       
+        display:flex;
+
+        @include mobile{
+          font-size: 15px;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            90%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+      }
+    }
+    a {
+      position: inherit;
+      left: 50%;
+      top: 86%;
+
+      img {
+        width: 35px;
+       
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
